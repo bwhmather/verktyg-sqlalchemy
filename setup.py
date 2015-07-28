@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='verktyg-sqlalchemy',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/bwhmather/verktyg-sqlalchemy',
     license='BSD',
     author='Ben Mather',
@@ -29,8 +29,8 @@ setup(
     ],
     platforms='any',
     install_requires=[
-        'verktyg >= 0.6, < 0.7',
-        'SQLAlchemy >= 0.9, < 10',
+        'verktyg >= 0.7, < 0.8',
+        'SQLAlchemy >= 1.0.8, < 1.1',
     ],
     packages=find_packages(),
     include_package_data=True,

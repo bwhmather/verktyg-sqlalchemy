@@ -20,7 +20,7 @@ class SQLAlchemyApplicationMixin(object):
 
     @contextmanager
     def db_session(self):
-        session = self._db_session_factory()
+        session = self.db_make_session()
 
         try:
             yield session

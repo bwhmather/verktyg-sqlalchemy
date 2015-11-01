@@ -8,12 +8,12 @@ from werkzeug.utils import cached_property
 
 class SQLAlchemyApplicationMixin(object):
     @property
-    def db_uri(self):
-        return self.config['verktyg_sqlalchemy.database_uri']
+    def db_url(self):
+        return self.config['verktyg_sqlalchemy.database_url']
 
     @cached_property
     def db_engine(self):
-        return create_engine(self.db_uri)
+        return create_engine(self.db_url)
 
     def db_make_session(self):
         return Session(bind=self.db_engine, expire_on_commit=False)
@@ -48,8 +48,8 @@ class SQLAlchemyRequestMixin(object):
         return session
 
 
-def bind(builder, *, database_uri):
-    builder.config['verktyg_sqlalchemy.database_uri'] = database_uri
+def bind(builder, *, database_url):
+    builder.config['verktyg_sqlalchemy.database_url'] = database_url
 
     builder.add_application_mixins(SQLAlchemyApplicationMixin)
     builder.add_request_mixins(SQLAlchemyRequestMixin)

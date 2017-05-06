@@ -30,7 +30,7 @@ setup(
     platforms='any',
     install_requires=[
         'verktyg >= 0.9, < 0.10',
-        'SQLAlchemy >= 1.0.8, < 1.1',
+        'SQLAlchemy >= 1.1.9, < 2.0',
     ],
     packages=find_packages(),
     include_package_data=True,

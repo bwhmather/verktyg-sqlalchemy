@@ -29,7 +29,7 @@ setup(
     ],
     platforms='any',
     install_requires=[
-        'verktyg >= 0.7, < 0.9',
+        'verktyg >= 0.9, < 0.10',
         'SQLAlchemy >= 1.0.8, < 1.1',
     ],
     packages=find_packages(),

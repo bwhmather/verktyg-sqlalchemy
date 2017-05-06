@@ -16,8 +16,8 @@ Please post any problems or feature requests using the `issue tracker <issues_>`
 .. |build-status| image:: https://travis-ci.org/bwhmather/verktyg-sqlalchemy.png?branch=master
     :target: http://travis-ci.org/bwhmather/verktyg-sqlalchemy
     :alt: Build Status
-.. |coverage| image:: https://coveralls.io/repos/bwhmather/verktyg-sqlalchemy/badge.png?branch=develop
-    :target: https://coveralls.io/r/bwhmather/verktyg-sqlalchemy?branch=develop
+.. |coverage| image:: https://coveralls.io/repos/github/bwhmather/verktyg-sqlalchemy/badge.svg
+    :target: https://coveralls.io/github/bwhmather/verktyg-sqlalchemy
     :alt: Coverage
 .. _verktyg: https://github.com/bwhmather/verktyg
 .. _verktyg_sqlalchemy: https://github.com/bwhmather/verktyg-sqlalchemy

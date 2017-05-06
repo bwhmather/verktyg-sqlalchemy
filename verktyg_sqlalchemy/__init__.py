@@ -26,7 +26,7 @@ class SQLAlchemyApplicationMixin(object):
             yield session
             session.commit()
             session.expunge_all()
-        except:
+        except:  # noqa:
             session.rollback()
             raise
         finally:

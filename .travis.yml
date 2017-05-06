@@ -1,17 +1,17 @@
 language: python
 sudo: false
 python:
-  - "3.4"
+  - "3.6"
 
 install:
   - "pip install -e ."
   - "pip install coveralls"
   - "pip install pyflakes"
-  - "pip install pep8"
+  - "pip install pycodestyle"
 
 script:
   - "coverage run --source=verktyg_sqlalchemy setup.py test"
-  - "pep8 verktyg_sqlalchemy setup.py"
+  - "pycodestyle verktyg_sqlalchemy setup.py"
   - "pyflakes verktyg_sqlalchemy setup.py"
 
 after_success:

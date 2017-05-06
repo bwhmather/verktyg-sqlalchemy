@@ -3,7 +3,7 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from werkzeug.utils import cached_property
+from verktyg.utils import cached_property
 
 
 class SQLAlchemyApplicationMixin(object):
@@ -26,7 +26,7 @@ class SQLAlchemyApplicationMixin(object):
             yield session
             session.commit()
             session.expunge_all()
-        except:
+        except:  # noqa:
             session.rollback()
             raise
         finally:
